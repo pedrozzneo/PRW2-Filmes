@@ -15,13 +15,8 @@ export default function Home(){
     }
 
     useEffect(() => {
-        getData()   
+        getData()  
     }, [])
-    
-    useEffect(() => {
-        console.log(data)
-        data.length > 0 ? console.log(data[0].nome) : console.log("nothing")
-    }, [data])
 
     return(
         <>
@@ -29,7 +24,7 @@ export default function Home(){
 
             {data.map(user => {
                 return (
-                    <div>
+                    <div key={user.nome}>
                         {user.nome}
                     </div>
                 )
