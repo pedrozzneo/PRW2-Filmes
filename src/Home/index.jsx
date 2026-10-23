@@ -26,7 +26,8 @@ export default function Home(){
             {data.map(movies => {
                 return (
                     <div key={movies.id}>
-                        {movies.nome}
+                        <span> id: {movies.id}</span>
+                        <span>  {movies.nome}  </span>
                     </div>
                 )
             })}
