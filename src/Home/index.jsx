@@ -8,6 +8,7 @@ export default function Home(){
         axios.get("https://6ad156d7addc5b5cb142f654.mockapi.io/api/v1/carlaoclass/filmes")
             .then(response => {
                 setData(response.data)
+                console.log(response.data)
             })
             .catch(error => {
                 console.log(error)
@@ -22,10 +23,10 @@ export default function Home(){
         <>
             <h1> home </h1>
 
-            {data.map(user => {
+            {data.map(movies => {
                 return (
-                    <div key={user.nome}>
-                        {user.nome}
+                    <div key={movies.id}>
+                        {movies.nome}
                     </div>
                 )
             })}
