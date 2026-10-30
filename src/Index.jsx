@@ -5,6 +5,7 @@ import Banner from './Banner/Banner';
 import Add from './Add';
 import Read from './Read';
 import Delete from './Delete/delete';
+import Update from './Update';
 
 export default function Index(){
     return(
@@ -15,6 +16,7 @@ export default function Index(){
                 <Route path='*' element = {<Error/>}></Route>
                 <Route path='/add' element = {<Add/>}></Route>
                 <Route path='/delete' element = {<Delete/>}></Route>
+                <Route path='/update' element = {<Update/>}></Route>
                 <Route path='/read/:id' element = {<Read/>}></Route>
             </Routes>
         </BrowserRouter>
