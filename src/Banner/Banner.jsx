@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Banner(){
     return(
-        <div>
+        <header>
+            <h1> Movies Catalog </h1>
             <Link to="/">home</Link>
             <br></br>
             <Link to="/add">add</Link>
@@ -10,6 +11,6 @@ export default function Banner(){
             <Link to="/update">update</Link>
             <br></br>
             <Link to="/delete">delete</Link>
-        </div>
+        </header>
     )
 }
