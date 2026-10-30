@@ -6,7 +6,7 @@ export default function Home(){
     const [data, setData] = useState([])
 
     function getData(){
-        axios.get("https://6ad156d7addc5b5cb142f654.mockapi.io/api/v1/carlaoclass/filmes")
+        axios.get("https://6ad156d7addc5b5cb142f654.mockapi.io/api/v1/carlaoclass/movies")
             .then(response => {
                 setData(response.data)
                 console.log(response.data)
@@ -28,7 +28,7 @@ export default function Home(){
                 return (
                     <Link key={movies.id} to={`/read/${movies.id}`}>
                         <span> id: {movies.id}</span>
-                        <span>  {movies.nome}  </span>
+                        <span>  {movies.name}  </span>
                     </Link>
                 )
             })}

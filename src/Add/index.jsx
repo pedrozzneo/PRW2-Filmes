@@ -5,14 +5,14 @@ import Cancel from '../components/Cancel/Index';
 
 export default function Add(){
     const [values, setValues] = useState();
-    const [nome, setNome] = useState("");
-    const [genero, setGenero] = useState("");
-    const [ano, setAno] = useState(0);
+    const [name, setName] = useState("");
+    const [kind, setKind] = useState("");
+    const [year, setYear] = useState(0);
     
     const navigate = useNavigate();
 
     function add(){
-        axios.post("https://6ad156d7addc5b5cb142f654.mockapi.io/api/v1/carlaoclass/filmes", values)
+        axios.post("https://6ad156d7addc5b5cb142f654.mockapi.io/api/v1/carlaoclass/movies", values)
             .then(response => {
                 console.log(response);
                 navigate('/')
@@ -33,23 +33,23 @@ export default function Add(){
             }}>
                 <label> 
                     name: <input onChange={(e) => {
-                        setNome(e.target.value)
+                        setName(e.target.value)
                     }}></input>
                 </label>
                 <br></br>
                 <label> 
                     kind: <input onChange={(e) => {
-                        setGenero(e.target.value)
+                        setKind(e.target.value)
                     }}></input>
                 </label>
                 <br></br>
                 <label> 
                     year: <input onChange={(e) => {
-                        setAno(Number(e.target.value))
+                        setYear(Number(e.target.value))
                     }}></input>
                 </label>
                 <br></br>
-                <button onClick={() => setValues({nome, genero, ano})}> create </button>
+                <button onClick={() => setValues({name: name, kind: kind, year: year})}> create </button>
                 <Cancel/>
             </form>
         </div>

@@ -7,7 +7,7 @@ export default function Read(){
     const [data, setData] = useState({})
     
     useEffect(() => {
-        axios.get(`https://6ad156d7addc5b5cb142f654.mockapi.io/api/v1/carlaoclass/filmes/${id}`)
+        axios.get(`https://6ad156d7addc5b5cb142f654.mockapi.io/api/v1/carlaoclass/movies/${id}`)
             .then(res => {
                 setData(res.data);
             })
@@ -19,11 +19,11 @@ export default function Read(){
     return(
         <div>
             <h1>{id}</h1>
-            <span>name: {data.nome}</span>
+            <span>name: {data.name}</span>
             <br></br>
-            <span>kind: {data.genero}</span>
+            <span>kind: {data.kind}</span>
             <br></br>
-            <span>ano: {data.ano}</span>
+            <span>ano: {data.year}</span>
         </div>
     )
 }
