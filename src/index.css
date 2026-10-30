@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg: #0e0d12;
+    --surface: #18161f;
+    --surface-2: #221f2b;
+    --border: #2e2a3a;
+    --text: #ece9f2;
+    --muted: #9a94a8;
+    --accent: #e8b84a;
+    --accent-hover: #f2c862;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1d1a26 0%, var(--bg) 60%);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+#root {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 16px 48px;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 2.4rem;
+    margin: 32px 0 16px;
+    text-transform: capitalize;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* banner */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    margin: 0 auto 0 0;
+    font-size: 2rem;
+    color: var(--accent);
+    text-transform: none;
+}
+
+header br {
+    display: none;
+}
+
+header a {
+    color: var(--muted);
+    padding: 6px 14px;
+    border-radius: 999px;
+    text-transform: capitalize;
+    transition: background 0.2s, color 0.2s;
+}
+
+header a:hover {
+    background: var(--surface-2);
+    color: var(--text);
+}
+
+/* home list */
+#root > a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-weight: 500;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+#root > a:hover {
+    transform: translateX(4px);
+    border-color: var(--accent);
+}
+
+#root > a span:first-child {
+    font-size: 0.8rem;
+    color: var(--muted);
+    background: var(--surface-2);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+/* forms */
+form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+form h1 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+form br {
+    display: none;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(232, 184, 74, 0.2);
+}
+
+form span {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+button,
+form a {
+    display: inline-block;
+    padding: 10px 22px;
+    margin: 8px 8px 0 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+button {
+    background: var(--accent);
+    color: #1a1608;
+    border: none;
+}
+
+button:hover {
+    background: var(--accent-hover);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+form a {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+}
+
+form a:hover {
+    color: var(--text);
+    border-color: var(--muted);
+}
+
+/* read page */
+#root > div > span {
+    display: block;
+    padding: 14px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 8px;
+}
+
+#root > div > br {
+    display: none;
+}
