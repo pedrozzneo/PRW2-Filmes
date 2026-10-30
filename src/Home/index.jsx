@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Home(){
     const [data, setData] = useState([])
@@ -25,10 +26,10 @@ export default function Home(){
 
             {data.map(movies => {
                 return (
-                    <div key={movies.id}>
+                    <Link key={movies.id} to={`/read/${movies.id}`}>
                         <span> id: {movies.id}</span>
-                        <span> name: {movies.nome}  </span>
-                    </div>
+                        <span>  {movies.nome}  </span>
+                    </Link>
                 )
             })}
         </>
