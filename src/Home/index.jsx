@@ -27,7 +27,7 @@ export default function Home(){
                 return (
                     <div key={movies.id}>
                         <span> id: {movies.id}</span>
-                        <span>  {movies.nome}  </span>
+                        <span> name: {movies.nome}  </span>
                     </div>
                 )
             })}
