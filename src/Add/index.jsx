@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import Cancel from '../components/Cancel/Index';
 
 export default function Add(){
     const [values, setValues] = useState();
@@ -29,27 +30,27 @@ export default function Add(){
         <div>
             <form onSubmit={(e) => {
                 e.preventDefault();
-                setValues({nome, genero, ano})
             }}>
                 <label> 
-                    nome: <input onChange={(e) => {
+                    name: <input onChange={(e) => {
                         setNome(e.target.value)
                     }}></input>
                 </label>
                 <br></br>
                 <label> 
-                    genero: <input onChange={(e) => {
+                    kind: <input onChange={(e) => {
                         setGenero(e.target.value)
                     }}></input>
                 </label>
                 <br></br>
                 <label> 
-                    ano: <input onChange={(e) => {
+                    year: <input onChange={(e) => {
                         setAno(Number(e.target.value))
                     }}></input>
                 </label>
                 <br></br>
-                <button> enviar </button>
+                <button onClick={() => setValues({nome, genero, ano})}> create </button>
+                <Cancel/>
             </form>
         </div>
     )
